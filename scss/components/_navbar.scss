@@ -1,0 +1,64 @@
+/*header*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $color_secundario;
+}
+
+.nav_link{
+    color: $color_principal;
+    padding: 10px;
+
+    &:hover {
+        border-bottom: 2px solid $color_principal;
+    }
+}
+
+
+.btn_buscar {
+    padding: 0px 5px 0px 5px;
+    background-color: $color_secundario;
+    border: 1px solid $color_principal;
+    color: $color_principal;
+    margin-left: -5px;
+}
+
+.barra_buscar{
+    background-color: $color_secundario;
+    border: 1px solid $color_principal;
+
+    &[type="search"] {
+        color: $color_principal;
+        padding-left: 5px;
+    }
+}
+
+
+.navbar-hamburguesa-logo{
+    height: 40px;
+    margin: 20px;
+}
+
+.offcanvas-body,
+.offcanvas-header{
+    background-color: $color_secundario;
+
+    .boton_cerrar {
+        color: $color_principal;
+        font-size: 20px;
+    }
+}
+
+.navbar-toggler{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0px 10px;
+    padding-top: 10px;
+
+    &-icon{
+        color: $color_principal;
+        border-radius: 10px;
+    }
+}
+

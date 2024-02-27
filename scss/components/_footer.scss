@@ -1,0 +1,22 @@
+/*iconos footer*/
+footer {
+    text-align: center;
+    background-color: $color_secundario;
+    padding: 20px;
+
+    .redes {
+        @include flex_alterno(row, center, center);
+
+    
+        .icono {
+            font-size: 25px;
+            padding: 10px;
+            color: $color_principal;
+    
+            &:hover {
+                transform: scale(1.5);
+                transition: 0.5s;
+            }
+        }
+    }
+}

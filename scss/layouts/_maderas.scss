@@ -1,0 +1,195 @@
+/*maderas*/
+/*categorias*/
+.categorias_maderas{
+    text-align: center;
+    padding: 60px;
+    background-color: $color_secundario;
+
+    &_titulo{
+        background-color: $color_tercero;
+        color: $color_principal;
+        padding: 10px;
+        width: 60%;
+        border-radius: 10px;
+        margin: 0px auto;
+        margin-bottom: 40px;
+
+        h3 {
+            background-color: $color_tercero;
+        }
+    }
+
+    &_card{
+        @extend .flex;
+
+        gap: 50px;
+        background-color: $color_tercero;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 80%;
+        margin: 0 auto;
+
+        
+        .card_maderas{
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+
+            &:hover .card_maderas_texto {
+                transform: translateX(0); 
+            }
+
+            
+            &_texto{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.342);
+                color: $color_principal;
+                border-radius: 10px;
+                padding: 10px;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                transform: translateY(100%);
+                transition: transform 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+            }
+        
+
+            img{
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
+                transition: transform 0.5s ease;
+            }
+
+            button{
+                background-color: $color_secundario;
+                color: $color_principal;
+                padding: 5px 10px;
+                border-radius: 10px;
+                margin-top: 20px;
+                font-size: 12px;
+
+                &:hover{
+                    background-color: $color_principal;
+                    color: $color_secundario;
+                }
+            }
+        } 
+    }
+}
+
+
+
+/*articulos de madera*/
+.articulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    padding: 100px 0px;
+    margin: 0px 50px;
+
+
+    &_madera{
+        border-radius: 10px;
+        border: 2px solid $color-secundario;
+        position: relative;
+        overflow: hidden;
+        width: 350px;
+        height: 450px;
+        justify-self: center;
+
+        &:hover img{
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+            margin: 20px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+            transition: 0.5s;
+        }
+
+        &_texto{
+            text-align: center;
+            margin: 0px 10px;
+
+            p{
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+            button{
+                background-color: $color-secundario;
+                color: $color-principal;
+                padding: 5px 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                &:hover{
+                    background-color: $color-principal;
+                    color: $color-secundario;
+                }
+            }
+
+            .precio{
+                font-size: 22px;
+                background-color: #d31d1d;
+                color: $color-principal;
+                width: 50px;
+                margin: 0 auto;
+                border-radius: 10px;
+            }
+        } 
+    }
+}
+
+
+/*botones de paginacion*/
+.paginas_maderas{
+    @extend .flex;
+    text-align: center;
+    gap: 5px;
+    font-size: 22px;
+    margin: 20px;
+
+    a{
+        color: $color_secundario;
+        border: 2px solid $color_secundario;
+        padding: 10px;
+        transition: 0.2s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    @for $i from 1 through 11 {
+        $btn-color: darken($color_principal, 9.09% * ($i - 1));
+        .btn_#{$i}{
+            background-color: $btn-color;
+            color: lighten($color_secundario, 10% * ($i - 1));
+
+            @if $i == 6 {
+                color: $color_secundario;
+            }
+        }
+    }
+}
