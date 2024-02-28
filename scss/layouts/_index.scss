@@ -12,6 +12,10 @@
         position: relative;
         margin: 45px;
         box-shadow: $boxshadow;
+
+        .carousel-indicators{
+            z-index: 1;
+        }
     }
 }
 .carousel-item img {

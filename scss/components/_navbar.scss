@@ -4,6 +4,7 @@ header {
     top: 0;
     z-index: 2;
     background-color: $color_secundario;
+    padding: 20px;
 }
 
 .nav_link{
@@ -60,5 +61,9 @@ header {
         color: $color_principal;
         border-radius: 10px;
     }
+}
+
+.navbar-nav{
+    gap: 20px;
 }
 

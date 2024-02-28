@@ -97,6 +97,7 @@ header {
   top: 0;
   z-index: 2;
   background-color: rgb(20, 19, 19);
+  padding: 20px;
 }
 
 .nav_link {
@@ -150,6 +151,10 @@ header {
   border-radius: 10px;
 }
 
+.navbar-nav {
+  gap: 20px;
+}
+
 /*portada*/
 /*index*/
 .container_portada {
@@ -161,6 +166,9 @@ header {
   position: relative;
   margin: 45px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
+}
+.container_portada .carousel_portada .carousel-indicators {
+  z-index: 1;
 }
 
 .carousel-item img {
